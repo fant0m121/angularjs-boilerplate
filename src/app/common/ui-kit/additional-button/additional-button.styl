@@ -1,0 +1,53 @@
+$additional-border-radius = 7px 5px 5px 5px
+$additional-color = #ffffff
+
+.ui-additional-button
+    display inline-block
+    vertical-align middle
+    position relative
+    cursor pointer
+    border-radius $additional-border-radius
+    background-color transparent
+    border 0
+    color black
+    text-decoration none
+    transition background-color .17s ease-in-out, color .17s ease-in-out, border-color .17s ease-in-out
+    outline 0
+    overflow hidden
+    font-weight bold
+    text-transform uppercase
+    &:hover
+    &:focus
+        text-decoration none
+
+    &--gray
+        background-color white
+        border 1px solid $color-dark-gray
+        color $color-dark-gray
+        &:focus
+            background-color $color-munsell
+        &:hover
+        &:active
+            background-color white
+            border-color $color-lime-green
+            color $color-dark-gray
+
+        .ui-button-loader
+            background-color white
+            &__point
+                background $color-dark-gray
+
+    &--md
+        font-size 11px
+        line-height 18px
+        padding 8px 52px
+
+    &--block
+        display block
+        width 100%
+
+    &--loading
+        color transparent
+
+    .ui-button-loader
+        border-radius $additional-border-radius

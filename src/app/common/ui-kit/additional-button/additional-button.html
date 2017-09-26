@@ -1,0 +1,5 @@
+<button class="ui-additional-button ui-additional-button--{{$ctrl.size}} ui-additional-button--{{$ctrl.theme}} ui-general-button--{{$ctrl.display}}" ng-if="!$ctrl.to">
+    <span ng-class="{'ui-additional-button--loading': $ctrl.mode == 'loading'}">{{$ctrl.title}}</span>
+    <button-loader ng-if="$ctrl.mode === 'loading'"></button-loader>
+</button>
+<a ui-sref="{{$ctrl.to}}" class="ui-additional-button ui-additional-button--{{$ctrl.size}} ui-additional-button--{{$ctrl.theme}} ui-general-button--{{$ctrl.display}}" ng-if="$ctrl.to">{{$ctrl.title}}</a>

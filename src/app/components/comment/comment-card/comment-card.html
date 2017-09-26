@@ -1,0 +1,16 @@
+<div class="ui-comment-card">
+    <div class="ui-comment-card__avatar" >
+        <img src="/assets/images/avatar.png">
+    </div>
+    <div class="ui-comment-card__content">
+        <div class="ui-comment-card__header">
+            <a class="ui-comment-card__author" ui-sref="user.info({code: $ctrl.item.User.Id})">{{$ctrl.item.User.FullName ? $ctrl.item.User.FullName : $ctrl.item.User.Email}} </a>
+            <span class="ui-comment-card__dot">•</span>
+            <span class="ui-comment-card__date">{{$ctrl.item.CreateDate | amCalendar}}</span>
+            <div class="ui-comment-card__quote">
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="ui-comment-card__text" ng-bind-html="$ctrl.item.Text"></div>
+    </div>
+</div>

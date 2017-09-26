@@ -1,0 +1,61 @@
+<div class="ui-page-news">
+    <div class="l-grid l-grid--container">
+        <div class="l-row">
+            <div class="l-col l-col--xs-12 l-col--md-12">
+                <div class="ui-heading ui-heading--lvl1">Новости</div>
+            </div>
+        </div>
+        <div class="l-row l-row--xs-space-between">
+            <div class="l-col l-col--xs-12 l-col--md-4 l-col--xs-left">
+                <div class="ui-text">
+                    На данной странице вы сможете ближе познакомиться с нами, нашей миссией, нашими целями
+                </div>
+            </div>
+            <div class="l-col l-col--xs-3 l-col--xs-right">
+                <div class="ui-filter">
+                    <div class="ui-filter__text">
+                        <i class="fa fa-filter" aria-hidden="true"></i>
+                        <span>Фильтр</span>
+                    </div>
+                    <div class="ui-filter__list">
+                        <span>По категории</span>
+                        <span>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="ui-filter__list">
+                        <span>2017</span>
+                        <span>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="l-row">
+            <div class="l-col h-text--xs-left" ng-repeat="article in $ctrl.articles" ng-class="{'l-col--md-12': ($index % 12 === 0), 'l-col--md-4': ($index % 4 > 0)}">
+                <div class="ui-home-article-cart">
+                    <div class="ui-home-article-cart__content">
+                        <div class="ui-home-article-cart__date">{{article.CreateDate}}</div>
+                        <div class="ui-home-article-cart__header"><a ui-sref="article.detail({code: article.AltTitle})">{{article.Title}}</a></div>
+                        <div class="ui-home-article-cart__info">
+                            <div class="ui-home-article-cart__details">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <span>{{article.Views}}</span>
+                            </div>
+                            <div class="ui-home-article-cart__details">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                <span>{{article.Like}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="l-row l-row--xs-center ">
+            <div class="l-col l-col--xs-12 l-col--md-2 h-text--xs-center">
+                <general-button title="Больше новостей"></general-button>
+            </div>
+        </div>
+    </div>
+</div>

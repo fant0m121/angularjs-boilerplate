@@ -1,0 +1,44 @@
+@import '../assets/css/_helpers/*'
+/* Do not remove the comments below. It's the markers used by wiredep to inject
+   stylus dependencies when defined in the bower.json of your dependencies */
+// bower:styl
+// endbower
+$fa-font-path = '/assets/fonts'
+
+/* Do not remove the comments below. It's the markers used by gulp-inject to inject
+   all your stylus files automatically */
+// injector
+// endinjector
+@import '../../bower_components/font-awesome-stylus/index'
+
+html
+    position relative
+    font-size 14px
+    font-weight 400
+    font-family $font-default
+    line-height 1.5
+
+html, body
+    min-height 100%
+    min-width 320px
+    color $color-default
+
+*
+    box-sizing  border-box
+
+.ui-main-content
+    min-height 100%
+
+// Mixins
+@import '../assets/css/grid/mixins/helpers'
+@import '../assets/css/grid/mixins/grid-framework'
+@import '../assets/css/grid/mixins/bem'
+
+// Components
+@import '../assets/css/grid/components/col'
+@import '../assets/css/grid/components/grid'
+@import '../assets/css/grid/components/row'
+@import '../assets/css/grid/components/text'
+init($breakpoints, $columns)
+
+@import '../assets/css/components/*'

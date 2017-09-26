@@ -1,0 +1,23 @@
+$badge-border-radius = 5px
+$badge-color = #ffffff
+
+.ui-badge
+    display inline-block
+    vertical-align middle
+    border-radius $badge-border-radius
+    background-color transparent
+    padding 6px 8px
+    font-family $font-default
+    font-size 11px
+
+    &--free
+        background-color $color-mountain
+        color $badge-color
+
+    &--busy
+        background #ff6cb1
+        color $badge-color
+
+    &--waiting
+        background #ffb600
+        color $badge-color

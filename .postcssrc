@@ -1,0 +1,7 @@
+{
+    "plugins": {
+        "cssnano": false,
+        "postcss-flexbugs-fixes": false,
+        "autoprefixer": true
+    }
+}

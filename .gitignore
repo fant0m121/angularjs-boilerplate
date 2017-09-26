@@ -1,0 +1,8 @@
+node_modules/
+bower_components/
+coverage/
+dist/
+client_app/
+.sass-cache/
+.idea/
+.tmp/

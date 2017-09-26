@@ -1,0 +1,24 @@
+<div class="l-grid l-grid--container">
+    <div class="l-row">
+        <div class="l-col l-col--xs-12 l-col--md-12 h-text--xs-center">
+            <div class="ui-home-page-news__title">
+                <div class="ui-home-page-news__header ui-heading ui-heading--lvl1">Новости</div>
+            </div>
+            <div class="ui-home-page-news__description">
+                Узнавайте все самые последние новости из первых уст. Только правда, только свежие новости.
+            </div>
+            <div class="l-grid l-grid--container">
+                <div class="l-row">
+                    <div class="l-col h-text--xs-left" ng-repeat="article in $ctrl.news" ng-class="{'l-col--md-4': ($index % 4 === 0 || $index % 4 === 3), 'l-col--md-8': ($index % 4 === 1 || $index % 4 === 2)}">
+                        <div class="ui-home-article-cart">
+                            <div class="ui-home-article-cart__content">
+                                <div class="ui-home-article-cart__date">{{article.CreateDate}}</div>
+                                <div class="ui-home-article-cart__header"><a ui-sref="article.detail({code: article.AltTitle})">{{article.Title}}</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

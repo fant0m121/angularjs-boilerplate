@@ -1,0 +1,31 @@
+<div class="ui-news-page">
+    <div class="ui-news-page__banner"></div>
+    <div class="l-grid l-grid--container">
+        <div class="l-row l-row--xs-center" ng-if="!$ctrl.loading">
+            <div class="l-col l-col--xs-12 l-col--md-8">
+                <div class="ui-heading ui-heading--lvl1">{{$ctrl.item.Title}}</div>
+                <div class="ui-news-page__date">{{$ctrl.item.CreateDate}}</div>
+                <div class="ui-news-page__description" ng-bind-html="$ctrl.item.FullDescription">{{$ctrl.item.FullDescription}}</div>
+                <div class="ui-social ui-social--left">
+                    <div class="ui-social__link ui-social__link--md ui-social__vk">
+                        <i class="fa fa-vk" aria-hidden="true"></i>
+                    </div>
+                    <div class="ui-social__link ui-social__link--md ui-social__odnoklassniki">
+                        <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+                    </div>
+                    <div class="ui-social__link ui-social__link--md ui-social__facebook">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="l-row l-row--xs-center" ng-if="!$ctrl.loading">
+            <div class="l-col l-col--xs-12 l-col--md-8">
+                <div class="ui-heading ui-heading--lvl1">Комментарии (2)</div>
+                <comment-list comments="$ctrl.comments" ng-if="$ctrl.comments.length > 0" level="0"></comment-list>
+                <div class="ui-heading ui-heading--lvl1">Оставить комментарий</div>
+                <comment-form></omment-form>
+            </div>
+        </div>
+    </div>
+</div>

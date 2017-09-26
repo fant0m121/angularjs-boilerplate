@@ -1,0 +1,5 @@
+<button class="ui-secondary-button ui-secondary-button--{{$ctrl.size}} ui-secondary-button--{{$ctrl.theme}} ui-secondary-button--{{$ctrl.display}}" ng-if="!$ctrl.to">
+    <span ng-class="{'ui-secondary-button--loading': $ctrl.mode == 'loading'}">{{$ctrl.title}}</span>
+    <button-loader ng-if="$ctrl.mode === 'loading'"></button-loader>
+</button>
+<a ui-sref="{{$ctrl.to}}" ui-sref-active="ui-secondary-button--active" ng-class="{'ui-secondary-button--{{$ctrl.size}}': true, 'ui-secondary-button--{{$ctrl.theme}}': true, 'ui-secondary-button--{{$ctrl.display}}': true}" class="ui-secondary-button" ng-if="$ctrl.to">{{$ctrl.title}}</a>

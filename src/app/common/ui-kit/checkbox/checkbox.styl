@@ -1,0 +1,146 @@
+.ui-checkbox
+    display inline-block
+    vertical-align middle
+    user-select none
+    display flex
+    font-weight normal
+    cursor pointer
+
+
+    &--inline
+        margin-right 35px
+
+        &:last-child
+            margin-right 0
+
+    &--block
+        margin 0
+        display block
+
+    input[type='checkbox']
+    input[type='radio']
+        display none
+
+        &[disabled]
+
+            & + span
+                color #aaa
+
+                &:hover
+                    color #aaa
+
+            &:checked + span:after
+                color white
+                opacity 0.8
+
+        & + span
+        & + span
+            width 16px
+            height 16px
+            margin 0
+            display block
+            background-color white
+            cursor pointer
+            border 1px solid #d2d2d2;
+            position relative
+            font normal normal normal 10px/1 FontAwesome;
+            border-radius 1px
+
+            &:after
+                display block
+                background-color transparent
+                transition background-color 0.2s ease
+                content "\f00c"
+                left 2px
+                position absolute
+                top 2px
+                color transparent
+
+            & + span
+                font-family Arial
+                font-weight 400
+                font-size 14px
+                line-height 14px
+                padding-left 15px
+                display inline-block
+
+        &:checked
+            & + span:after
+                color white
+
+            & + span
+                border-color $color-kelly-green
+                background $color-kelly-green
+
+    //стили для разных тем фофрмления
+    &--pink
+        margin 12px 0
+
+        input[type='checkbox']
+        input[type='radio']
+
+            & + span
+                border 1px solid white
+                background transparent
+
+                &:after
+                    background transparent
+
+                & + span
+                    color #fff
+
+            &:checked
+                & + span:after
+                    color white
+
+                & + span
+                    border-color #af194e
+                    background #af194e
+
+    &--blue
+        margin 12px 0
+
+        input[type='checkbox']
+        input[type='radio']
+
+            & + span
+                border 1px solid white
+                background transparent
+
+                &:after
+                    background transparent
+
+                & + span
+                    color #fff
+
+            &:checked
+                & + span:after
+                    color white
+
+                & + span
+                    border-color #2b53a2
+                    background #2b53a2
+
+    &--green
+        margin 12px 0
+
+        input[type='checkbox']
+        input[type='radio']
+
+            & + span
+                border 1px solid white
+                background transparent
+
+                &:after
+                    background transparent
+
+                & + span
+                    color white
+
+            &:checked
+                & + span:after
+                    color white
+
+                & + span
+                    border-color #094443
+                    background #094443

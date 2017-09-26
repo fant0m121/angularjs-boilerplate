@@ -1,0 +1,20 @@
+{
+  "ArticleId": 1,
+  "Title": "sample string 2",
+  "ShortDescription": "sample string 3",
+  "Description": "sample string 4",
+  "FullDescription": "sample string 5",
+  "Keywords": "sample string 6",
+  "AltTitle": "sample-string-7",
+  "CreateUserId": "sample string 8",
+  "ImageUrl": "sample string 9",
+  "IsArticle": true,
+  "IsNews": true,
+  "Images": [
+    "sample string 1",
+    "sample string 2"
+  ],
+  "IsApprove": true,
+  "SeoTitle": "sample string 13",
+  "SeoDescription": "sample string 14"
+}

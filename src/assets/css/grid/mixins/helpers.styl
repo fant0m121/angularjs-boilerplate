@@ -1,0 +1,78 @@
+// Helper for the grid align top
+make-row-helpers($breakpoint)
+    .l-row--{$breakpoint}-top
+        align-items flex-start
+    .l-row--{$breakpoint}-middle
+        align-items center
+    .l-row--{$breakpoint}-bottom
+        align-items flex-end
+
+    .l-row--{$breakpoint}-space-around
+        justify-content space-around
+    .l-row--{$breakpoint}-space-between
+        justify-content space-between
+    .l-row--{$breakpoint}-center
+        justify-content center
+    .l-row--{$breakpoint}-end
+        justify-content flex-end
+
+    .l-row--{$breakpoint}-reverse
+        flex-direction reverse
+    .l-row--{$breakpoint}-column
+        flex-direction column
+
+// Helper for the sorting the first item
+make-col-helpers($breakpoint)
+    .l-col--{$breakpoint}-align-top
+        align-self flex-start
+    .l-col--{$breakpoint}-align-center
+        align-self center
+    .l-col--{$breakpoint}-align-bottom
+        align-self flex-end
+
+    .l-col--{$breakpoint}-space-around
+        justify-content space-around
+    .l-col--{$breakpoint}-space-between
+        justify-content space-between
+    .l-col--{$breakpoint}-center
+        justify-content center
+
+    .l-col--{$breakpoint}-top
+        align-items flex-start
+    .l-col--{$breakpoint}-middle
+        align-items center
+    .l-col--{$breakpoint}-bottom
+        align-items flex-end
+
+    .l-col--{$breakpoint}-first
+        order -1
+    .l-col--{$breakpoint}-reset
+        order 0
+    .l-col--{$breakpoint}-last
+        order 1
+
+    .l-col--{$breakpoint}-reverse
+        flex-direction row-reverse
+    .l-col--{$breakpoint}-column
+        flex-direction column
+    .l-col--{$breakpoint}-flex
+        display flex
+
+    .l-col--{$breakpoint}-auto
+        flex 0 1 auto
+        width auto
+
+// Helper for aligning the text
+make-text-helpers($breakpoint)
+    .h-text--{$breakpoint}-right
+        text-align right
+    .h-text--{$breakpoint}-left
+        text-align left
+    .h-text--{$breakpoint}-center
+        text-align center
+
+// Helper wrapper
+make-helpers($breakpoint)
+    make-row-helpers($breakpoint)
+    make-col-helpers($breakpoint)
+    make-text-helpers($breakpoint)
