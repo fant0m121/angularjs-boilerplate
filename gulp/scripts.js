@@ -56,10 +56,10 @@ function webpackWrapper(watch, test, callback) {
     }
 
     return gulp.src(sources)
-            .pipe($.plumber())
-            .pipe(webpack(webpackOptions, null, webpackChangeHandler))
-            .pipe($.plumber.stop())
-            .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app')));
+        .pipe($.plumber())
+        .pipe(webpack(webpackOptions, null, webpackChangeHandler))
+        .pipe($.plumber.stop())
+        .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app')));
 }
 
 gulp.task('scripts', () => {

@@ -43,7 +43,6 @@ gulp.task('html', ['inject', 'partials'], () => {
         .pipe(jsFilter.restore)
         .pipe(cssFilter)
         .pipe($.sourcemaps.init())
-        //.pipe($.cssnano())
         .pipe($.rev())
         .pipe($.sourcemaps.write('maps'))
         .pipe(cssFilter.restore)
@@ -81,6 +80,6 @@ gulp.task('other', () => {
         .pipe(gulp.dest(path.join(conf.paths.dist, '/')));
 });
 
-gulp.task('clean', () => $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')]));
+gulp.task('clean', () => $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/'), path.join(conf.paths.docs, '/')]));
 
 gulp.task('build', ['html', 'fonts', 'other']);

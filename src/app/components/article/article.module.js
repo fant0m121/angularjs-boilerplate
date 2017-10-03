@@ -1,14 +1,16 @@
 /**
  *
- * @ngdoc module
+ * @ngdoc overview
  * @name article
+ * @memberOf components
  *
  * @requires angularjs-boilerplate.article.detail
  * @requires angularjs-boilerplate.article.cart
  * @requires angularjs-boilerplate.article.list
+ * @requires angularjs-boilerplate.article.service
  *
- * @description Модуль для работы с статьями.
- *
+ * @description
+ * Модуль для работы с статьями.
  **/
 
 import { ArticleDetailModule } from './article-detail/article-detail.module';

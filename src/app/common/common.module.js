@@ -1,7 +1,8 @@
 /**
  *
- * @ngdoc module
+ * @ngdoc overview
  * @name common
+ * @module common
  *
  * @requires angularjs-boilerplate.header
  * @requires angularjs-boilerplate.footer
@@ -10,7 +11,6 @@
  * @requires angularjs-boilerplate.ui-kit
  *
  * @description
- *
  * Общие модули для всего проекта.
  *
  **/

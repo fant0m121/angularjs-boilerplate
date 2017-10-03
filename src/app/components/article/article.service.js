@@ -3,6 +3,7 @@
  * @ngdoc service
  * @module angularjs-boilerplate.article
  * @name ArticleService
+ * @memberOf article
  *
  * @param {service} $log Simple service for logging
  * @param {service} $http Сервис работы с http запросами
@@ -23,9 +24,10 @@ export class ArticleService {
 
     /**
      * @ngdoc method
-     * @name ArticleService#getArticleList
+     * @name getArticleList
+     * @methodOf ArticleService
      *
-     * @param {params} параметры для постраничной пагинации и фильтров при запросе списка новостей
+     * @param {object} params параметры для постраничной пагинации и фильтров при запросе списка новостей
      * @description Получение списка новостей
      **/
     getArticleList(params = {}) {
@@ -46,10 +48,12 @@ export class ArticleService {
 
     /**
      * @ngdoc method
-     * @name ArticleService#getArticleById
+     * @name getArticleById
+     * @methodOf ArticleService
      *
      * @param {number} articleById ID получаемой новости
-     * @description Получение новости по ее ID
+     * @description
+     * Получение новости по ее ID
      **/
     getArticleById({articleById}) {
         return this.$http.get(`app/__data__/article-${articleById}.json`)
@@ -64,10 +68,12 @@ export class ArticleService {
 
     /**
      * @ngdoc method
-     * @name ArticleService#getArticleByCode
+     * @name getArticleByCode
+     * @methodOf ArticleService
      *
      * @param {string} code Символьный код получаемой новости
-     * @description Получение новости по ее символьному коду
+     * @description
+     * Получение новости по ее символьному коду
      **/
     getArticleByCode(code) {
         return this.$http.get(`app/__data__/article-${code}.json`)

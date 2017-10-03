@@ -1,6 +1,5 @@
 /**
- *
- * @ngdoc module
+ * @ngdoc overview
  * @name components
  *
  * @requires angularjs-boilerplate.main
@@ -9,10 +8,9 @@
  * @requires angularjs-boilerplate.not-found
  *
  * @description
- *
  * Модуль компонентов. Включает в себя все другие компоненты приложения.
  *
- **/
+ */
 
 import { MainModule } from './main/main.module';
 import { NotFoundModule } from './not-found/not-found.module';

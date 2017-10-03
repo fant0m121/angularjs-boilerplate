@@ -1,11 +1,13 @@
 /**
- * @ngdoc type
- * @name ArticleDetailController
+ * @ngdoc overview
  * @module angularjs-boilerplate.article
+ * @name ArticleDetailController
+ * @memberOf article
  *
  * @requires lodash
  *
- * @description Логика работы с детальной страницей новости
+ * @description
+ * Логика работы с детальной страницей новости
  **/
 
 import _ from 'lodash';
@@ -26,6 +28,7 @@ export default class ArticleDetailController {
     /**
      * @ngdoc method
      * @name ArticleDetailController#getArticle
+     * @methodOf ArticleDetailController
      *
      * @description Получение информации о новости
      **/

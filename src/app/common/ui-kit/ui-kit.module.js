@@ -1,9 +1,18 @@
 /**
  *
- * @ngdoc module
- * @name common.ui-kit
+ * @ngdoc overview
+ * @name ui-kit
+ * @module ui-kit
+ * @memberOf common
  *
- * @description Элементы типографии
+ * @requires angularjs-boilerplate.additional-button
+ * @requires angularjs-boilerplate.badge
+ * @requires angularjs-boilerplate.checkbox
+ * @requires angularjs-boilerplate.general-button
+ * @requires angularjs-boilerplate.secondary-button
+ *
+ * @description
+ * Элементы типографии
  *
  **/
 

@@ -1,9 +1,11 @@
 /**
- * @ngdoc type
- * @name ArticleListController
+ * @ngdoc overview
  * @module angularjs-boilerplate.article
+ * @name ArticleListController
+ * @memberOf article
  *
- * @description Логика работы страницы со списком новостей
+ * @description
+ * Логика работы страницы со списком новостей
  **/
 
 export default class ArticleListController {
@@ -21,9 +23,11 @@ export default class ArticleListController {
 
     /**
      * @ngdoc method
-     * @name ArticleListController#getArticleList
+     * @name getArticleList
+     * @methodOf ArticleListController
      *
-     * @description Получение списка новостей
+     * @description
+     * Получение списка новостей
      **/
     getArticleList() {
         this.loading = true;
