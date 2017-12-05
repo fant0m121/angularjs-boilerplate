@@ -1,10 +1,10 @@
-var path = require('path');
-var gulp = require('gulp');
-var conf = require('./conf');
+const path = require('path');
+const gulp = require('gulp');
+const conf = require('./conf');
 
-var browserSync = require('browser-sync');
+const browserSync = require('browser-sync');
 
-var $ = require('gulp-load-plugins')();
+const $ = require('gulp-load-plugins')();
 
 gulp.task('markups', () => {
     function renameToHtml(path) {

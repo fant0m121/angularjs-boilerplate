@@ -11,21 +11,39 @@ function webpackWrapper(watch, test, callback) {
     const webpackOptions = {
         watch,
         module: {
-            preLoaders: [
+            rules: [
                 {
-                    test: /\.js$/,
-                    exclude: /(node_modules|bower_components)/,
-                    loader: 'eslint-loader'
-                }
-            ],
-            loaders: [
-                {
+                    enforce: 'pre',
                     test: /\.js$/,
                     exclude: /node_modules/,
-                    loaders: ['ng-annotate', 'babel-loader?presets[]=es2015']
+                    loader: 'eslint-loader'
                 }, {
                     test: /\.html$/,
-                    loader: 'ngtemplate?relativeTo=app/!html'
+                    use: [
+                        {
+                            loader: 'ngtemplate-loader',
+                            options: {
+                                angular: true
+                            }
+                        }, {
+                            loader: 'raw-loader'
+                        }
+                    ]
+                }, {
+                    test: /\.js$/,
+                    exclude: /(node_modules|bower_components)/,
+                    use: [
+                        {
+                            loader: 'ng-annotate-loader?relativeTo=' + path.resolve(__dirname, 'app/!html')
+                        }, {
+                            loader: 'babel-loader',
+                            options: {
+                                babelrc: true
+                            }
+                        }, {
+                            loader: 'eslint-loader'
+                        }
+                    ]
                 }
             ]
         },
@@ -55,11 +73,7 @@ function webpackWrapper(watch, test, callback) {
         sources.push(path.join(conf.paths.src, '/app/**/*.spec.js'));
     }
 
-    return gulp.src(sources)
-        .pipe($.plumber())
-        .pipe(webpack(webpackOptions, null, webpackChangeHandler))
-        .pipe($.plumber.stop())
-        .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app')));
+    return gulp.src(sources).pipe($.plumber()).pipe(webpack(webpackOptions, null, webpackChangeHandler)).pipe($.plumber.stop()).pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app')));
 }
 
 gulp.task('scripts', () => {
