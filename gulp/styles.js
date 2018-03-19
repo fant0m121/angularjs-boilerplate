@@ -3,8 +3,6 @@ const gulp = require('gulp');
 const conf = require('./conf');
 const browserSync = require('browser-sync');
 const $ = require('gulp-load-plugins')();
-const wiredep = require('wiredep').stream;
-const _ = require('lodash');
 
 function buildStyles() {
     const injectFiles = gulp.src([
@@ -25,10 +23,11 @@ function buildStyles() {
     return gulp
         .src([path.join(conf.paths.src, '/app/index.styl')])
         .pipe($.inject(injectFiles, injectOptions))
-        .pipe(wiredep(_.extend({}, conf.wiredep)))
         .pipe($.sourcemaps.init())
         .pipe($.plumber())
-        .pipe($.stylus())
+        .pipe($.stylus({
+            'include css': true
+        }))
         .on('error', conf.errorHandler('Stylus'))
         .pipe($.postcss())
         .pipe($.sourcemaps.write('maps'))

@@ -4,9 +4,6 @@ const conf = require('./conf');
 
 const $ = require('gulp-load-plugins')();
 
-const wiredep = require('wiredep').stream;
-const _ = require('lodash');
-
 const browserSync = require('browser-sync');
 
 gulp.task('inject-reload', ['inject'], () => {
@@ -31,5 +28,5 @@ gulp.task('inject', [
         addRootSlash: false
     };
 
-    return gulp.src(path.join(conf.paths.src, '/*.html')).pipe($.inject(injectStyles, injectOptions)).pipe($.inject(injectScripts, injectOptions)).pipe(wiredep(_.extend({}, conf.wiredep))).pipe(gulp.dest(path.join(conf.paths.tmp, '/serve')));
+    return gulp.src(path.join(conf.paths.src, '/*.html')).pipe($.inject(injectStyles, injectOptions)).pipe($.inject(injectScripts, injectOptions)).pipe(gulp.dest(path.join(conf.paths.tmp, '/serve')));
 });

@@ -3,7 +3,7 @@ const gulp = require('gulp');
 const conf = require('./conf');
 
 const $ = require('gulp-load-plugins')({
-    pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
+    pattern: ['gulp-*', 'uglify-save-license', 'del']
 });
 
 gulp.task('partials', ['markups'], () => {
@@ -59,10 +59,9 @@ gulp.task('html', ['inject', 'partials'], () => {
         .pipe($.size({ title: path.join(conf.paths.dist, '/'), showFiles: true }));
 });
 
-// Only applies for fonts from bower dependencies
 // Custom fonts are handled by the "other" task
 gulp.task('fonts', () => {
-    return gulp.src($.mainBowerFiles())
+    return gulp.src('**/fonts')
         .pipe($.filter('**/*.{eot,otf,svg,ttf,woff,woff2}'))
         .pipe($.flatten())
         .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));

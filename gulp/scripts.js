@@ -31,7 +31,7 @@ function webpackWrapper(watch, test, callback) {
                     ]
                 }, {
                     test: /\.js$/,
-                    exclude: /(node_modules|bower_components)/,
+                    exclude: /node_modules/,
                     use: [
                         {
                             loader: 'ng-annotate-loader?relativeTo=' + path.resolve(__dirname, 'app/!html')
@@ -44,6 +44,9 @@ function webpackWrapper(watch, test, callback) {
                             loader: 'eslint-loader'
                         }
                     ]
+                }, {
+                    test: /\.css$/,
+                    loader: 'style!css'
                 }
             ]
         },

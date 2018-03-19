@@ -5,7 +5,7 @@ Empty project for angularjs
 
 Install dependencies
 ```shell
-npm install && bower install
+npm install
 ```
 Serve in dev mode, with hot reload at localhost:3000
 ```shell
